@@ -51,6 +51,15 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/privacy-policy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/terms', [PageController::class, 'terms'])->name('terms');
 
+// Storage fallback for shared hosts without active symlink
+Route::get('/storage/{path}', function (string $path) {
+    $filePath = storage_path('app/public/' . $path);
+    if (!file_exists($filePath)) {
+        abort(404);
+    }
+    return response()->file($filePath);
+})->where('path', '.*')->name('storage.fallback');
+
 // Admin Authentication
 Route::get('/login', fn () => redirect()->route('admin.login'))->name('login');
 
@@ -78,9 +87,14 @@ Route::prefix('admin')->group(function () {
         Route::post('/categories', [AdminCategoryController::class, 'store'])->name('admin.categories.store');
         Route::match(['put', 'patch', 'post'], '/categories/{category}', [AdminCategoryController::class, 'update'])->name('admin.categories.update');
 
-        // Order Enquiries
+        // Order Enquiries (Full CRUD)
         Route::get('/orders', [AdminOrderEnquiryController::class, 'index'])->name('admin.orders.index');
+        Route::get('/orders/create', [AdminOrderEnquiryController::class, 'create'])->name('admin.orders.create');
+        Route::post('/orders', [AdminOrderEnquiryController::class, 'store'])->name('admin.orders.store');
         Route::get('/orders/{enquiry}', [AdminOrderEnquiryController::class, 'show'])->name('admin.orders.show');
+        Route::get('/orders/{enquiry}/edit', [AdminOrderEnquiryController::class, 'edit'])->name('admin.orders.edit');
+        Route::match(['put', 'patch'], '/orders/{enquiry}', [AdminOrderEnquiryController::class, 'update'])->name('admin.orders.update');
+        Route::delete('/orders/{enquiry}', [AdminOrderEnquiryController::class, 'destroy'])->name('admin.orders.destroy');
         Route::patch('/orders/{enquiry}/status', [AdminOrderEnquiryController::class, 'updateStatus'])->name('admin.orders.status');
 
         // Settings Management
