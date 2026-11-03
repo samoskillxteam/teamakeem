@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title inertia>{{ config('app.name', 'Biba of Good Things') }}</title>
+        <title inertia>{{ config('app.name', 'TeamAkeem Ladies World') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
         <!-- Dark Mode Flash Prevention Script -->
         <script>
             (function() {
-                const storedTheme = localStorage.getItem('biba_theme');
+                const storedTheme = localStorage.getItem('teamakeem_theme') || localStorage.getItem('biba_theme');
                 if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark');
                 } else {

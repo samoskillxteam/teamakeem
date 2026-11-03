@@ -20,7 +20,7 @@ class HomeController extends Controller
             ->get();
 
         $clothingCategory = $categories->firstWhere('slug', 'clothing');
-        $confectioneryCategory = $categories->firstWhere('slug', 'confectionery');
+        $confectioneryCategory = $categories->firstWhere('slug', 'spa') ?? $categories->firstWhere('slug', 'confectionery');
 
         $featuredClothing = Product::where('is_available', true)
             ->where('category_id', $clothingCategory?->id)

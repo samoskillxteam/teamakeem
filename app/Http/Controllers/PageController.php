@@ -12,8 +12,8 @@ class PageController extends Controller
     {
         return Inertia::render('About', [
             'story' => Setting::get('about_story'),
-            'clothingBrand' => Setting::get('clothing_brand_name', 'Biba Clothings'),
-            'treatsBrand' => Setting::get('confectionery_brand_name', 'Biba Treats'),
+            'clothingBrand' => Setting::get('clothing_brand_name', 'TeamAkeem Ladies Wears'),
+            'treatsBrand' => Setting::get('confectionery_brand_name', 'TeamAkeem Beauty & Wellness Spa'),
         ]);
     }
 

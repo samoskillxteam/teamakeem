@@ -15,23 +15,25 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes - Biba of Good Things (Clothings & Treats)
+| Web Routes - TeamAkeem Ladies World (Ladies Wears & Beauty Spa)
 |--------------------------------------------------------------------------
 */
 
 // Public Storefront Pages
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Clothing Catalog
+// Ladies Wears Catalog (Clothing)
 Route::get('/clothing', [CatalogController::class, 'clothing'])->name('clothing.index');
 Route::get('/clothing/{slug}', [CatalogController::class, 'clothingShow'])->name('clothing.show');
 
-// Treats Catalog (formerly /confectionery)
-Route::get('/treats', [CatalogController::class, 'confectionery'])->name('confectionery.index');
-Route::get('/treats/{slug}', [CatalogController::class, 'confectioneryShow'])->name('confectionery.show');
-// Legacy redirect
-Route::redirect('/confectionery', '/treats', 301);
-Route::redirect('/confectionery/{slug}', '/treats/{slug}', 301);
+// Beauty & Wellness Spa Catalog
+Route::get('/spa', [CatalogController::class, 'spa'])->name('spa.index');
+Route::get('/spa/{slug}', [CatalogController::class, 'spaShow'])->name('spa.show');
+Route::get('/treats', [CatalogController::class, 'spa'])->name('confectionery.index');
+Route::get('/treats/{slug}', [CatalogController::class, 'spaShow'])->name('confectionery.show');
+// Legacy redirects
+Route::redirect('/confectionery', '/spa', 301);
+Route::redirect('/confectionery/{slug}', '/spa/{slug}', 301);
 
 // Cart Routes
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');

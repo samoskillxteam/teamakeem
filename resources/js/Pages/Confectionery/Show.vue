@@ -152,7 +152,7 @@ const addToCart = (redirectCart = false) => {
 
 <template>
     <AppLayout 
-        :title="`${product.name} — Biba Treats`"
+        :title="`${product.name} — TeamAkeem Beauty & Wellness Spa`"
         :description="product.short_description || product.name"
     >
         <!-- Breadcrumb -->
@@ -160,7 +160,7 @@ const addToCart = (redirectCart = false) => {
             <div class="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
                 <Link :href="route('home')" class="hover:text-zinc-800 dark:hover:text-zinc-200">Home</Link>
                 <ChevronRight class="w-3.5 h-3.5" />
-                <Link :href="route('confectionery.index')" class="hover:text-zinc-800 dark:hover:text-zinc-200">Biba Treats</Link>
+                <Link :href="route('spa.index')" class="hover:text-zinc-800 dark:hover:text-zinc-200">TeamAkeem Beauty &amp; Wellness Spa</Link>
                 <ChevronRight class="w-3.5 h-3.5" />
                 <span class="text-zinc-800 dark:text-zinc-200 font-medium truncate max-w-xs">{{ product.name }}</span>
             </div>
@@ -184,7 +184,7 @@ const addToCart = (redirectCart = false) => {
                         <div class="flex items-center justify-between">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
                                 <Cake class="w-3.5 h-3.5" />
-                                <span>{{ product.category?.brand_name || 'Biba Treats' }}</span>
+                                <span>{{ product.category?.brand_name || 'TeamAkeem Beauty & Wellness Spa' }}</span>
                             </span>
 
                             <span 

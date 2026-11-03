@@ -43,15 +43,15 @@ const submit = () => {
             <div class="w-32 h-32 flex items-center justify-center mx-auto">
                 <img 
                     :src="logoSrc" 
-                    alt="Biba of Good Things" 
+                    alt="TeamAkeem Ladies World" 
                     class="w-full h-full object-contain"
                 />
             </div>
-            <h2 class="font-display font-bold text-2xl sm:text-3xl tracking-tight text-zinc-900 dark:text-zinc-100">
-                Biba Administrator
+            <h2 class="font-bold text-2xl sm:text-3xl tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-sans">
+                TeamAkeem Admin
             </h2>
-            <p class="text-xs text-zinc-500 uppercase tracking-widest font-semibold">
-                Secure Storefront Management
+            <p class="text-xs text-orange-500 uppercase tracking-widest font-semibold">
+                Ladies World &amp; Wellness Spa Management
             </p>
         </div>
 
@@ -74,7 +74,7 @@ const submit = () => {
                                 type="email"
                                 required
                                 autofocus
-                                placeholder="admin@biba.com"
+                                placeholder="admin@teamakeem.com"
                                 class="w-full pl-10 pr-4 py-2.5 text-xs rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#C59A65]"
                             />
                         </div>
@@ -120,7 +120,7 @@ const submit = () => {
                 <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 text-center">
                     <p class="text-[11px] text-zinc-400 flex items-center justify-center gap-1">
                         <ShieldCheck class="w-3.5 h-3.5 text-emerald-600" />
-                        <span>Authorized Biba staff access only</span>
+                        <span>Authorized TeamAkeem staff access only</span>
                     </p>
                 </div>
             </div>

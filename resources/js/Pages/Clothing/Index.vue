@@ -64,94 +64,58 @@ interface PurplyPinkTheme {
 
 const themes: PurplyPinkTheme[] = [
     {
-        id: 'mulberry',
-        name: 'Mulberry Velvet & Plum',
-        bgGradientLight: 'linear-gradient(135deg, #FDF2FA 0%, #F7E4F2 50%, #EED3E8 100%)',
-        bgGradientDark: 'linear-gradient(135deg, #2A0A26 0%, #1B0519 50%, #0E020D 100%)',
-        glowColor1: 'rgba(184, 50, 128, 0.28)',
-        glowColor2: 'rgba(139, 30, 106, 0.35)',
-        borderColorLight: 'rgba(184, 50, 128, 0.18)',
-        borderColorDark: 'rgba(184, 50, 128, 0.32)',
-        tagBgLight: 'rgba(139, 30, 106, 0.1)',
-        tagBgDark: 'rgba(184, 50, 128, 0.25)',
-        tagTextLight: '#8B1E6A',
-        tagTextDark: '#FBB6CE',
-        tagBorder: 'rgba(184, 50, 128, 0.25)',
-        cardBgDark: '#1C061A',
-        cardBorderDark: 'rgba(184, 50, 128, 0.35)',
-        brandPillBg: '#8B1E6A',
+        id: 'teamakeem_orange',
+        name: 'TeamAkeem Sunset Orange & Onyx',
+        bgGradientLight: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 50%, #FED7AA 100%)',
+        bgGradientDark: 'linear-gradient(135deg, #2A1103 0%, #1A0901 50%, #0E0501 100%)',
+        glowColor1: 'rgba(249, 87, 0, 0.28)',
+        glowColor2: 'rgba(234, 88, 12, 0.35)',
+        borderColorLight: 'rgba(249, 87, 0, 0.22)',
+        borderColorDark: 'rgba(249, 87, 0, 0.35)',
+        tagBgLight: 'rgba(249, 87, 0, 0.12)',
+        tagBgDark: 'rgba(249, 87, 0, 0.25)',
+        tagTextLight: '#C2410C',
+        tagTextDark: '#FDBA74',
+        tagBorder: 'rgba(249, 87, 0, 0.3)',
+        cardBgDark: '#1C0B02',
+        cardBorderDark: 'rgba(249, 87, 0, 0.35)',
+        brandPillBg: '#EA580C',
     },
     {
-        id: 'orchid',
-        name: 'Orchid Magenta & Wild Fuchsia',
-        bgGradientLight: 'linear-gradient(135deg, #FDF4FF 0%, #FAE8FF 50%, #F5D0FE 100%)',
-        bgGradientDark: 'linear-gradient(135deg, #32072B 0%, #1F031B 50%, #0E010C 100%)',
-        glowColor1: 'rgba(217, 70, 239, 0.26)',
-        glowColor2: 'rgba(162, 28, 175, 0.35)',
-        borderColorLight: 'rgba(217, 70, 239, 0.18)',
-        borderColorDark: 'rgba(217, 70, 239, 0.32)',
-        tagBgLight: 'rgba(162, 28, 175, 0.1)',
-        tagBgDark: 'rgba(217, 70, 239, 0.25)',
-        tagTextLight: '#A21CAF',
-        tagTextDark: '#F0ABFC',
-        tagBorder: 'rgba(217, 70, 239, 0.25)',
-        cardBgDark: '#1D031A',
-        cardBorderDark: 'rgba(217, 70, 239, 0.35)',
-        brandPillBg: '#A21CAF',
+        id: 'teamakeem_amber',
+        name: 'Amber Gold & Warm Sand',
+        bgGradientLight: 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%)',
+        bgGradientDark: 'linear-gradient(135deg, #271704 0%, #190E02 50%, #0D0701 100%)',
+        glowColor1: 'rgba(245, 158, 11, 0.26)',
+        glowColor2: 'rgba(217, 119, 6, 0.35)',
+        borderColorLight: 'rgba(245, 158, 11, 0.22)',
+        borderColorDark: 'rgba(245, 158, 11, 0.35)',
+        tagBgLight: 'rgba(217, 119, 6, 0.12)',
+        tagBgDark: 'rgba(245, 158, 11, 0.25)',
+        tagTextLight: '#B45309',
+        tagTextDark: '#FDE68A',
+        tagBorder: 'rgba(245, 158, 11, 0.3)',
+        cardBgDark: '#1B0E02',
+        cardBorderDark: 'rgba(245, 158, 11, 0.35)',
+        brandPillBg: '#D97706',
     },
     {
-        id: 'amethyst',
-        name: 'Amethyst Violet & Dusty Rose',
-        bgGradientLight: 'linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 50%, #E9D5FF 100%)',
-        bgGradientDark: 'linear-gradient(135deg, #28092E 0%, #18041D 50%, #0C010F 100%)',
-        glowColor1: 'rgba(192, 38, 211, 0.25)',
-        glowColor2: 'rgba(126, 34, 206, 0.35)',
-        borderColorLight: 'rgba(192, 38, 211, 0.18)',
-        borderColorDark: 'rgba(192, 38, 211, 0.32)',
-        tagBgLight: 'rgba(126, 34, 206, 0.1)',
-        tagBgDark: 'rgba(192, 38, 211, 0.25)',
-        tagTextLight: '#7E22CE',
-        tagTextDark: '#E9D5FF',
-        tagBorder: 'rgba(192, 38, 211, 0.25)',
-        cardBgDark: '#1A041F',
-        cardBorderDark: 'rgba(192, 38, 211, 0.35)',
-        brandPillBg: '#7E22CE',
-    },
-    {
-        id: 'rose_noir',
-        name: 'Dark Berry & Rose Quartz',
-        bgGradientLight: 'linear-gradient(135deg, #FFF1F2 0%, #FCE7F3 50%, #FBCFE8 100%)',
-        bgGradientDark: 'linear-gradient(135deg, #330823 0%, #200416 50%, #10010B 100%)',
-        glowColor1: 'rgba(244, 63, 94, 0.22)',
-        glowColor2: 'rgba(190, 24, 93, 0.35)',
-        borderColorLight: 'rgba(190, 24, 93, 0.18)',
-        borderColorDark: 'rgba(190, 24, 93, 0.32)',
-        tagBgLight: 'rgba(190, 24, 93, 0.1)',
-        tagBgDark: 'rgba(244, 63, 94, 0.22)',
-        tagTextLight: '#BE185D',
-        tagTextDark: '#FDA4AF',
-        tagBorder: 'rgba(190, 24, 93, 0.25)',
-        cardBgDark: '#210417',
-        cardBorderDark: 'rgba(190, 24, 93, 0.35)',
-        brandPillBg: '#BE185D',
-    },
-    {
-        id: 'lilac_fuchsia',
-        name: 'Wild Lilac & Pinkish Mauve',
-        bgGradientLight: 'linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 50%, #F5D0FE 100%)',
-        bgGradientDark: 'linear-gradient(135deg, #26092B 0%, #17051B 50%, #0B010E 100%)',
-        glowColor1: 'rgba(232, 121, 249, 0.25)',
-        glowColor2: 'rgba(168, 85, 247, 0.35)',
-        borderColorLight: 'rgba(168, 85, 247, 0.18)',
-        borderColorDark: 'rgba(168, 85, 247, 0.32)',
-        tagBgLight: 'rgba(168, 85, 247, 0.1)',
-        tagBgDark: 'rgba(232, 121, 249, 0.22)',
-        tagTextLight: '#A855F7',
-        tagTextDark: '#F5D0FE',
-        tagBorder: 'rgba(168, 85, 247, 0.25)',
-        cardBgDark: '#18041D',
-        cardBorderDark: 'rgba(168, 85, 247, 0.35)',
-        brandPillBg: '#A855F7',
+        id: 'teamakeem_noir',
+        name: 'Obsidian Jet & Radiant Tangerine',
+        bgGradientLight: 'linear-gradient(135deg, #FAFAFA 0%, #F4F4F5 50%, #E4E4E7 100%)',
+        bgGradientDark: 'linear-gradient(135deg, #18181B 0%, #121214 50%, #09090B 100%)',
+        glowColor1: 'rgba(249, 115, 22, 0.25)',
+        glowColor2: 'rgba(249, 87, 0, 0.3)',
+        borderColorLight: 'rgba(249, 115, 22, 0.2)',
+        borderColorDark: 'rgba(249, 115, 22, 0.3)',
+        tagBgLight: 'rgba(24, 24, 27, 0.08)',
+        tagBgDark: 'rgba(249, 115, 22, 0.2)',
+        tagTextLight: '#18181B',
+        tagTextDark: '#FED7AA',
+        tagBorder: 'rgba(249, 115, 22, 0.3)',
+        cardBgDark: '#121214',
+        cardBorderDark: 'rgba(249, 115, 22, 0.3)',
+        brandPillBg: '#F97316',
     },
 ];
 
@@ -180,10 +144,10 @@ onMounted(() => {
 
 <template>
     <AppLayout 
-        title="Biba Clothings — Curated Apparel" 
-        description="Explore tailored linen sets, silk wrap dresses, power blazers, and luxury cotton essentials from Biba Clothings."
+        title="TeamAkeem Ladies Wears — Underwear, Loungewear & Nightwear" 
+        description="Explore luxury seamless underwear, silk nightwear, robes, and everyday modesty collections from TeamAkeem Ladies Wears."
     >
-        <!-- Category Hero Banner (Dynamic Purply-Pinkish Gradient on Refresh) -->
+        <!-- Category Hero Banner (Dynamic Brand Orange & Amber Gradient on Refresh) -->
         <div 
             class="relative overflow-hidden border-b transition-colors duration-700 ease-out"
             :style="{
@@ -191,7 +155,7 @@ onMounted(() => {
                 borderColor: isDark ? currentTheme.borderColorDark : currentTheme.borderColorLight,
             }"
         >
-            <!-- Ambient Purply-Pink Glow (Reactive) -->
+            <!-- Ambient Brand Glow (Reactive) -->
             <div 
                 class="absolute -top-32 -left-32 w-96 h-96 rounded-full blur-3xl pointer-events-none transition-all duration-700"
                 :style="{ backgroundColor: currentTheme.glowColor1 }"
@@ -213,21 +177,21 @@ onMounted(() => {
                                 borderColor: currentTheme.tagBorder,
                             }"
                         >
-                            <Shirt class="w-3.5 h-3.5" />
-                            <span>Fashion & Apparel Collection</span>
+                            <Shirt class="w-3.5 h-3.5 text-orange-500" />
+                            <span>Ladies Wears, Underwear &amp; Intimates</span>
                         </div>
 
                         <div>
-                            <h1 class="font-semibold text-3xl sm:text-5xl lg:text-6xl text-zinc-900 dark:text-white tracking-tight leading-tight">
-                                {{ category.brand_name || 'Biba Clothings' }}
+                            <h1 class="font-bold text-3xl sm:text-5xl lg:text-6xl text-zinc-900 dark:text-white tracking-tight leading-tight uppercase font-sans">
+                                {{ category.brand_name || 'TeamAkeem Ladies Wears' }}
                             </h1>
                             <p class="text-base sm:text-xl text-zinc-700 dark:text-zinc-300 font-normal mt-2 tracking-tight">
-                                Effortless elegance, graceful cuts, and bespoke tailoring.
+                                Everything ladies: seamless underwear, silk nightwear, robes &amp; everyday confidence.
                             </p>
                         </div>
 
                         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300/80 leading-relaxed max-w-xl">
-                            {{ category.description || 'Explore curated linen two-pieces, silky satin co-ords, fluid wrap dresses, and luxury everyday essentials tailored to make an understated, confident statement.' }}
+                            {{ category.description || 'Explore everything ladies: premium supportive wireless bras, seamless briefs, silk kimono robes, lace lingerie sets, and flattering everyday loungewear.' }}
                         </p>
 
                         <!-- Key Highlights / Badges -->
@@ -236,15 +200,15 @@ onMounted(() => {
                                 class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-black/40 border shadow-2xs font-medium backdrop-blur-md"
                                 :style="{ borderColor: isDark ? currentTheme.borderColorDark : currentTheme.borderColorLight }"
                             >
-                                <Sparkles class="w-3.5 h-3.5 text-amber-500" />
-                                <span>Curated Designer Cuts</span>
+                                <Sparkles class="w-3.5 h-3.5 text-orange-500" />
+                                <span>Seamless Intimates</span>
                             </div>
                             <div 
                                 class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-black/40 border shadow-2xs font-medium backdrop-blur-md"
                                 :style="{ borderColor: isDark ? currentTheme.borderColorDark : currentTheme.borderColorLight }"
                             >
                                 <MessageCircle class="w-3.5 h-3.5 text-emerald-500" />
-                                <span>Instant WhatsApp Order</span>
+                                <span>Direct WhatsApp Ordering</span>
                             </div>
                             <div 
                                 class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-black/40 border shadow-2xs font-medium backdrop-blur-md"
@@ -268,8 +232,8 @@ onMounted(() => {
                             <!-- Image Container -->
                             <div class="aspect-square sm:aspect-[4/3] lg:aspect-square overflow-hidden bg-zinc-950">
                                 <img 
-                                    src="/images/clothing_hero.png" 
-                                    alt="Biba Clothings Satin & Silk Co-ord Sets" 
+                                    src="/storage/products/ladies/ladies_1.jpg" 
+                                    alt="TeamAkeem Ladies Wears &amp; Underwear" 
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
                             </div>
@@ -277,14 +241,14 @@ onMounted(() => {
                             <!-- Floating Apple-style pill badge on image -->
                             <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-10 flex items-center justify-between pointer-events-none">
                                 <div class="px-3 py-1.5 rounded-full bg-black/60 dark:bg-black/75 backdrop-blur-md text-white text-[11px] font-medium border border-white/10 shadow-sm flex items-center gap-1.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                    <span>Signature Co-Ord Sets</span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+                                    <span>Exclusive Underwear &amp; Robes</span>
                                 </div>
                                 <span 
                                     class="px-2.5 py-1 rounded-full text-white text-[10px] font-semibold backdrop-blur-md shadow-sm border border-white/20 transition-colors duration-500"
                                     :style="{ backgroundColor: currentTheme.brandPillBg }"
                                 >
-                                    Biba Clothings
+                                    TeamAkeem Ladies Wears
                                 </span>
                             </div>
                         </div>

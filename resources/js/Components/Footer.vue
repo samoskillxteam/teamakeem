@@ -17,9 +17,9 @@ const logoSrc = computed(() => {
 });
 
 const whatsappUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348083271068';
+    const raw = settings.value?.whatsapp_number || '2348076187311';
     const clean = raw.replace(/[^\d]/g, '');
-    return `https://wa.me/${clean}?text=${encodeURIComponent('Hello! I would like to make an enquiry with Biba of Good Things.')}`;
+    return `https://wa.me/${clean}?text=${encodeURIComponent('Hello TeamAkeem! I would like to make an enquiry.')}`;
 });
 </script>
 
@@ -32,20 +32,20 @@ const whatsappUrl = computed(() => {
                     <div class="flex items-center gap-2.5">
                         <img 
                             :src="logoSrc" 
-                            alt="Biba of Good Things" 
+                            alt="TeamAkeem Ladies World" 
                             class="h-9 w-9 object-contain rounded-full"
                         />
                         <div class="flex items-baseline gap-1.5">
-                            <span class="font-semibold text-sm tracking-tight text-zinc-900 dark:text-white">
-                                Biba
+                            <span class="font-bold text-sm tracking-tight text-zinc-900 dark:text-white uppercase">
+                                TeamAkeem
                             </span>
-                            <span class="text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 font-medium">
-                                Of Good Things
+                            <span class="text-[10px] tracking-widest uppercase text-orange-500 font-semibold">
+                                Ladies World
                             </span>
                         </div>
                     </div>
                     <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 max-w-sm leading-relaxed">
-                        Curated apparel from <span class="text-zinc-900 dark:text-white font-medium">Biba Clothings</span> and artisanal delicacies from <span class="text-zinc-900 dark:text-white font-medium">Biba Treats</span>. Human-guided checkout directly on WhatsApp.
+                        Curated ladies wear, intimates &amp; loungewear from <span class="text-zinc-900 dark:text-white font-medium">TeamAkeem Ladies Wears</span> and holistic beauty therapies at <span class="text-zinc-900 dark:text-white font-medium">TeamAkeem Beauty &amp; Wellness Spa</span>. We do home service.
                     </p>
 
                     <div class="pt-1">
@@ -61,50 +61,53 @@ const whatsappUrl = computed(() => {
                     </div>
                 </div>
 
-                <!-- Col 2: Biba Clothings -->
+                <!-- Col 2: TeamAkeem Ladies Wears -->
                 <div class="space-y-3">
                     <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-white">
-                        Biba Clothings
+                        Ladies Wears
                     </h4>
                     <ul class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
                         <li>
-                            <Link :href="route('clothing.index')" class="hover:text-black dark:hover:text-white transition-colors">All Apparel</Link>
+                            <Link :href="route('clothing.index')" class="hover:text-black dark:hover:text-white transition-colors">All Ladies Wears</Link>
                         </li>
                         <li>
-                            <Link :href="route('clothing.index', { search: 'co-ord' })" class="hover:text-black dark:hover:text-white transition-colors">Linen Co-ords</Link>
+                            <Link :href="route('clothing.index', { search: 'brief' })" class="hover:text-black dark:hover:text-white transition-colors">Seamless Underwear</Link>
                         </li>
                         <li>
-                            <Link :href="route('clothing.index', { search: 'dress' })" class="hover:text-black dark:hover:text-white transition-colors">Silk & Wrap Dresses</Link>
+                            <Link :href="route('clothing.index', { search: 'bra' })" class="hover:text-black dark:hover:text-white transition-colors">Wireless &amp; Push-Up Bras</Link>
                         </li>
                         <li>
-                            <Link :href="route('clothing.index', { search: 'blazer' })" class="hover:text-black dark:hover:text-white transition-colors">Tailored Blazers</Link>
+                            <Link :href="route('clothing.index', { search: 'robe' })" class="hover:text-black dark:hover:text-white transition-colors">Silk Robes &amp; Nightwear</Link>
                         </li>
                         <li>
-                            <Link :href="route('clothing.index', { search: 'tee' })" class="hover:text-black dark:hover:text-white transition-colors">Luxury Heavyweight Tees</Link>
+                            <Link :href="route('clothing.index', { search: 'shape' })" class="hover:text-black dark:hover:text-white transition-colors">Contour Shapewear</Link>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Biba Treats -->
+                <!-- Col 3: TeamAkeem Beauty & Wellness Spa -->
                 <div class="space-y-3">
                     <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-white">
-                        Biba Treats
+                        Beauty &amp; Spa
                     </h4>
                     <ul class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
                         <li>
-                            <Link :href="route('confectionery.index')" class="hover:text-black dark:hover:text-white transition-colors">All Delicacies</Link>
+                            <Link :href="route('spa.index')" class="hover:text-black dark:hover:text-white transition-colors">All Spa Services</Link>
                         </li>
                         <li>
-                            <Link :href="route('confectionery.index', { type: 'cupcake' })" class="hover:text-black dark:hover:text-white transition-colors">Gourmet Cupcakes</Link>
+                            <Link :href="route('spa.index', { type: 'massage' })" class="hover:text-black dark:hover:text-white transition-colors">Body Massages</Link>
                         </li>
                         <li>
-                            <Link :href="route('confectionery.index', { type: 'cake' })" class="hover:text-black dark:hover:text-white transition-colors">Celebration Bento Cakes</Link>
+                            <Link :href="route('spa.index', { type: 'treatment' })" class="hover:text-black dark:hover:text-white transition-colors">O-Shot &amp; Normal Repair</Link>
                         </li>
                         <li>
-                            <Link :href="route('confectionery.index', { type: 'snack' })" class="hover:text-black dark:hover:text-white transition-colors">Chocolate Brownies</Link>
+                            <Link :href="route('spa.index', { type: 'pedicure' })" class="hover:text-black dark:hover:text-white transition-colors">Pedicure &amp; Manicure</Link>
                         </li>
                         <li>
-                            <Link :href="route('confectionery.index', { type: 'drink' })" class="hover:text-black dark:hover:text-white transition-colors">Botanical Drinks</Link>
+                            <Link :href="route('spa.index', { type: 'traditional_spa' })" class="hover:text-black dark:hover:text-white transition-colors">Traditional Gyaran Jiki</Link>
+                        </li>
+                        <li>
+                            <Link :href="route('spa.index', { type: 'cosmetics' })" class="hover:text-black dark:hover:text-white transition-colors">Cosmetics &amp; Skincare</Link>
                         </li>
                     </ul>
                 </div>
@@ -116,16 +119,16 @@ const whatsappUrl = computed(() => {
                     </h4>
                     <div class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
                         <div class="flex items-start gap-2">
-                            <MapPin class="w-3.5 h-3.5 shrink-0 mt-0.5 text-zinc-400" />
-                            <span>{{ settings?.address || 'Lagos, Nigeria' }}</span>
+                            <MapPin class="w-3.5 h-3.5 shrink-0 mt-0.5 text-orange-500" />
+                            <span>{{ settings?.address || 'Kano & Lagos, Nigeria' }}</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <Phone class="w-3.5 h-3.5 shrink-0 text-zinc-400" />
-                            <span>{{ settings?.contact_phone || '+234 801 234 5678' }}</span>
+                            <Phone class="w-3.5 h-3.5 shrink-0 text-orange-500" />
+                            <span>{{ settings?.contact_phone || '+234 807 618 7311' }}</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <Mail class="w-3.5 h-3.5 shrink-0 text-zinc-400" />
-                            <span>{{ settings?.contact_email || 'bibaofgoodthings@gmail.com' }}</span>
+                            <Mail class="w-3.5 h-3.5 shrink-0 text-orange-500" />
+                            <span>{{ settings?.contact_email || 'teemakeemladiesworld@gmail.com' }}</span>
                         </div>
                     </div>
 
@@ -139,9 +142,9 @@ const whatsappUrl = computed(() => {
 
             <!-- Bottom Copyright -->
             <div class="mt-12 pt-6 border-t border-black/[0.06] dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between text-[11px] text-zinc-400 dark:text-zinc-500 gap-3">
-                <p>© {{ new Date().getFullYear() }} {{ settings?.business_name || 'Biba of Good Things' }}. All rights reserved.</p>
+                <p>© {{ new Date().getFullYear() }} {{ settings?.business_name || 'TeamAkeem Ladies World' }}. All rights reserved.</p>
                 <p>
-                    Curated fashion & artisanal sweet moments.
+                    Empowering feminine elegance, comfort &amp; holistic wellness. Healing starts in your mind.
                 </p>
             </div>
         </div>

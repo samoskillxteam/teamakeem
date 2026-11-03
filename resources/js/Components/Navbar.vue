@@ -30,9 +30,9 @@ const logoSrc = computed(() => {
 });
 
 const whatsappUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348083271068';
+    const raw = settings.value?.whatsapp_number || '2348076187311';
     const clean = raw.replace(/[^\d]/g, '');
-    return `https://wa.me/${clean}?text=${encodeURIComponent('Hello! I would like to make an enquiry with Biba of Good Things.')}`;
+    return `https://wa.me/${clean}?text=${encodeURIComponent('Hello TeamAkeem! I would like to make an enquiry.')}`;
 });
 </script>
 
@@ -45,26 +45,26 @@ const whatsappUrl = computed(() => {
                     <Link :href="route('home')" class="flex items-center gap-2.5 group">
                         <img 
                             :src="logoSrc" 
-                            alt="Biba of Good Things" 
-                            class="h-8 w-8 object-contain rounded-full transition-opacity group-hover:opacity-80"
+                            alt="TeamAkeem Ladies World" 
+                            class="h-9 w-9 object-contain rounded-full transition-transform group-hover:scale-105"
                         />
                         <div class="flex items-baseline gap-1.5">
-                            <span class="font-semibold text-sm tracking-tight text-zinc-900 dark:text-white">
-                                Biba
+                            <span class="font-bold text-sm tracking-tight text-zinc-900 dark:text-white uppercase font-sans">
+                                TeamAkeem
                             </span>
-                            <span class="text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 font-medium">
-                                Of Good Things
+                            <span class="text-[10px] tracking-widest uppercase text-orange-500 font-semibold">
+                                Ladies World
                             </span>
                         </div>
                     </Link>
                 </div>
 
-                <!-- Desktop Navigation Links (Apple Clean Minimalist Typography) -->
+                <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex items-center space-x-1 lg:space-x-7 text-[13px] tracking-tight">
                     <Link 
                         :href="route('home')" 
                         class="px-2.5 py-1 rounded-full transition-colors duration-150"
-                        :class="route().current('home') ? 'text-black dark:text-white font-medium' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                        :class="route().current('home') ? 'text-orange-500 dark:text-orange-400 font-semibold' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                     >
                         Store
                     </Link>
@@ -72,23 +72,23 @@ const whatsappUrl = computed(() => {
                     <Link 
                         :href="route('clothing.index')" 
                         class="px-2.5 py-1 rounded-full transition-colors duration-150"
-                        :class="route().current('clothing.*') ? 'text-black dark:text-white font-medium' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                        :class="route().current('clothing.*') ? 'text-orange-500 dark:text-orange-400 font-semibold' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                     >
-                        Clothings
+                        Ladies Wears
                     </Link>
 
                     <Link 
-                        :href="route('confectionery.index')" 
+                        :href="route('spa.index')" 
                         class="px-2.5 py-1 rounded-full transition-colors duration-150"
-                        :class="route().current('confectionery.*') ? 'text-black dark:text-white font-medium' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                        :class="route().current('spa.*') || route().current('confectionery.*') ? 'text-orange-500 dark:text-orange-400 font-semibold' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                     >
-                        Treats
+                        Beauty &amp; Spa
                     </Link>
 
                     <Link 
                         :href="route('about')" 
                         class="px-2.5 py-1 rounded-full transition-colors duration-150"
-                        :class="route().current('about') ? 'text-black dark:text-white font-medium' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                        :class="route().current('about') ? 'text-orange-500 dark:text-orange-400 font-semibold' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                     >
                         About
                     </Link>
@@ -96,7 +96,7 @@ const whatsappUrl = computed(() => {
                     <Link 
                         :href="route('contact')" 
                         class="px-2.5 py-1 rounded-full transition-colors duration-150"
-                        :class="route().current('contact') ? 'text-black dark:text-white font-medium' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                        :class="route().current('contact') ? 'text-orange-500 dark:text-orange-400 font-semibold' : 'text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                     >
                         Contact
                     </Link>
@@ -174,18 +174,18 @@ const whatsappUrl = computed(() => {
                     :href="route('clothing.index')"
                     @click="mobileMenuOpen = false"
                     class="block px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-                    :class="route().current('clothing.*') ? 'bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                    :class="route().current('clothing.*') ? 'bg-orange-500/10 text-orange-600 dark:text-orange-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                 >
-                    Biba Clothings
+                    Ladies Wears &amp; Underwear
                 </Link>
 
                 <Link
-                    :href="route('confectionery.index')"
+                    :href="route('spa.index')"
                     @click="mobileMenuOpen = false"
                     class="block px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-                    :class="route().current('confectionery.*') ? 'bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white' : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
+                    :class="route().current('spa.*') || route().current('confectionery.*') ? 'bg-orange-500/10 text-orange-600 dark:text-orange-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white'"
                 >
-                    Biba Treats
+                    Beauty &amp; Wellness Spa
                 </Link>
 
                 <Link

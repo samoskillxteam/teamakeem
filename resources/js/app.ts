@@ -6,7 +6,7 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Biba of Good Things';
+const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'TeamAkeem Ladies World';
 
 createInertiaApp({
     title: (title) => (title ? `${title} — ${appName}` : appName),
@@ -22,7 +22,7 @@ createInertiaApp({
             .mount(el);
     },
     progress: {
-        color: '#C59A65',
+        color: '#FA5A00',
         showSpinner: true,
     },
 });

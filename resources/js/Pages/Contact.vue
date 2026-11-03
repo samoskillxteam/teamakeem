@@ -18,31 +18,31 @@ const page = usePage<PageProps>();
 const settings = computed(() => page.props.settings);
 
 const cleanWhatsApp = computed(() => {
-    const raw = props.whatsappNumber || settings.value?.whatsapp_number || '2348083271068';
+    const raw = props.whatsappNumber || settings.value?.whatsapp_number || '2348076187311';
     return raw.replace(/[^\d]/g, '');
 });
 
 const directWhatsappUrl = computed(() => {
-    return `https://wa.me/${cleanWhatsApp.value}?text=${encodeURIComponent('Hello Biba! I would like to get in touch regarding an order.')}`;
+    return `https://wa.me/${cleanWhatsApp.value}?text=${encodeURIComponent('Hello TeamAkeem! I would like to get in touch regarding an order or spa booking.')}`;
 });
 </script>
 
 <template>
     <AppLayout 
-        title="Contact Biba of Good Things"
-        description="Get in touch with Biba Clothings and Biba Treats for orders, inquiries, custom sizing and delivery details."
+        title="Contact TeamAkeem Ladies World"
+        description="Get in touch with TeamAkeem Ladies Wears and TeamAkeem Beauty & Wellness Spa for orders, inquiries, custom sizing, and home service bookings."
     >
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
             <!-- Header -->
             <div class="text-center max-w-2xl mx-auto space-y-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-[#A66E38] dark:text-[#C59A65]">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400">
                     Direct Customer Support
                 </span>
-                <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-zinc-900 dark:text-zinc-100">
+                <h1 class="font-bold text-3xl sm:text-5xl text-zinc-900 dark:text-zinc-100 uppercase font-sans">
                     We’d Love to Hear From You
                 </h1>
                 <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300">
-                    Reach us directly on WhatsApp for instantaneous assistance, bespoke tailoring enquiries, or custom celebration cake consultations.
+                    Reach us directly on WhatsApp or call for instantaneous assistance, ladies wear sizing, and spa appointment bookings. We do home service.
                 </p>
             </div>
 
@@ -79,8 +79,8 @@ const directWhatsappUrl = computed(() => {
                         </div>
                         <h3 class="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100">Phone & Email</h3>
                         <div class="space-y-1.5 text-xs text-zinc-500 dark:text-zinc-400">
-                            <p class="font-semibold text-zinc-800 dark:text-zinc-200">{{ phone || '+234 808 327 1068' }}</p>
-                            <p>{{ email || 'bibaofgoodthings@gmail.com' }}</p>
+                            <p class="font-semibold text-zinc-800 dark:text-zinc-200">{{ phone || '+234 807 618 7311 / +234 901 654 4574' }}</p>
+                            <p>{{ email || 'teemakeemladiesworld@gmail.com' }}</p>
                         </div>
                     </div>
 

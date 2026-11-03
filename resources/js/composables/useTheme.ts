@@ -16,7 +16,7 @@ function applyTheme(dark: boolean) {
 function init() {
     if (initialised || typeof window === 'undefined') return;
     initialised = true;
-    const stored = localStorage.getItem('biba_theme');
+    const stored = localStorage.getItem('teamakeem_theme') || localStorage.getItem('biba_theme');
     if (stored === 'dark') {
         isDark.value = true;
     } else if (stored === 'light') {
@@ -25,7 +25,7 @@ function init() {
         isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches;
         // Listen for OS preference changes when no manual preference stored
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('biba_theme')) {
+            if (!localStorage.getItem('teamakeem_theme') && !localStorage.getItem('biba_theme')) {
                 isDark.value = e.matches;
                 applyTheme(isDark.value);
             }
@@ -40,13 +40,13 @@ export function useTheme() {
 
     const toggleTheme = () => {
         isDark.value = !isDark.value;
-        localStorage.setItem('biba_theme', isDark.value ? 'dark' : 'light');
+        localStorage.setItem('teamakeem_theme', isDark.value ? 'dark' : 'light');
         applyTheme(isDark.value);
     };
 
     const setTheme = (dark: boolean) => {
         isDark.value = dark;
-        localStorage.setItem('biba_theme', dark ? 'dark' : 'light');
+        localStorage.setItem('teamakeem_theme', dark ? 'dark' : 'light');
         applyTheme(dark);
     };
 

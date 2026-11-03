@@ -87,29 +87,29 @@ const formatPrice = (val: number | string) => {
                     </div>
                 </div>
 
-                <!-- Biba Clothings Count -->
+                <!-- TeamAkeem Ladies Wears Count -->
                 <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex items-center justify-between">
                     <div>
-                        <span class="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Biba Clothings</span>
-                        <div class="text-2xl sm:text-3xl font-display font-bold text-[#A66E38] dark:text-[#C59A65] mt-1">
+                        <span class="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Ladies Wears</span>
+                        <div class="text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 mt-1">
                             {{ stats.clothing_count }}
                         </div>
                     </div>
-                    <div class="p-3 rounded-xl bg-[#EFE8DD] dark:bg-zinc-800 text-[#4A3525] dark:text-[#C59A65]">
+                    <div class="p-3 rounded-xl bg-orange-500/10 dark:bg-zinc-800 text-orange-600 dark:text-orange-400">
                         <Shirt class="w-5 h-5" />
                     </div>
                 </div>
 
-                <!-- Biba Treats Count -->
+                <!-- TeamAkeem Spa Services Count -->
                 <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex items-center justify-between">
                     <div>
-                        <span class="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Biba Treats</span>
-                        <div class="text-2xl sm:text-3xl font-display font-bold text-rose-600 dark:text-rose-400 mt-1">
+                        <span class="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Spa &amp; Cosmetics</span>
+                        <div class="text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 mt-1">
                             {{ stats.confectionery_count }}
                         </div>
                     </div>
-                    <div class="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-400">
-                        <Cake class="w-5 h-5" />
+                    <div class="p-3 rounded-xl bg-orange-500/10 dark:bg-zinc-800 text-orange-600 dark:text-orange-400">
+                        <Sparkles class="w-5 h-5" />
                     </div>
                 </div>
 

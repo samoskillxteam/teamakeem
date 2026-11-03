@@ -10,9 +10,9 @@ class WhatsAppService
 {
     public function generateOrderEnquiry(array $cartData, array $customerData = [], ?string $ipAddress = null, ?string $userAgent = null): array
     {
-        $reference = 'BIB-' . date('Ymd') . '-' . strtoupper(Str::random(5));
-        $businessName = Setting::get('business_name', 'Biba of Good Things');
-        $rawPhone = Setting::get('whatsapp_number', '2348083271068');
+        $reference = 'TAK-' . date('Ymd') . '-' . strtoupper(Str::random(5));
+        $businessName = Setting::get('business_name', 'TeamAkeem Ladies World');
+        $rawPhone = Setting::get('whatsapp_number', '2348076187311');
         $phone = $this->normalizePhoneNumber($rawPhone);
 
         $customerName = trim($customerData['name'] ?? '');
@@ -36,7 +36,7 @@ class WhatsAppService
 
         $i = 1;
         foreach ($cartData['items'] as $item) {
-            $brand = $item['brand_name'] ?? 'Biba';
+            $brand = $item['brand_name'] ?? 'TeamAkeem';
             $message .= "{$i}. *{$item['product_name']}* ({$brand})\n";
 
             if (!empty($item['variant_title'])) {

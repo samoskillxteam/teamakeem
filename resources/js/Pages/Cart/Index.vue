@@ -68,7 +68,7 @@ const submitWhatsAppCheckout = () => {
 <template>
     <AppLayout 
         title="Your Order Bag — WhatsApp Checkout"
-        description="Review your selected items from Biba Clothings and Biba Treats and place your order directly via WhatsApp."
+        description="Review your selected items from TeamAkeem Ladies Wears and TeamAkeem Beauty & Wellness Spa and place your order directly via WhatsApp."
     >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
             <!-- Header -->
@@ -120,26 +120,26 @@ const submitWhatsAppCheckout = () => {
                 </div>
                 <h2 class="font-serif font-bold text-2xl text-zinc-900 dark:text-zinc-100">Your order bag is empty</h2>
                 <p class="text-sm text-zinc-500 max-w-md mx-auto mt-2 leading-relaxed">
-                    You haven’t added any items yet. Discover graceful fashion from 
-                    <strong>Biba Clothings</strong> or freshly baked artisanal sweets from 
-                    <strong>Biba Treats</strong>.
+                    You haven’t added any items yet. Discover ladies intimates &amp; robes from 
+                    <strong>TeamAkeem Ladies Wears</strong> or rejuvenating wellness therapies &amp; cosmetics from 
+                    <strong>TeamAkeem Beauty &amp; Wellness Spa</strong>.
                 </p>
 
                 <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Link
                         :href="route('clothing.index')"
-                        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#2D241E] hover:bg-[#43362C] dark:bg-[#C59A65] dark:hover:bg-[#B3804A] text-white dark:text-[#0F1115] font-semibold text-xs shadow flex items-center justify-center gap-2"
+                        class="w-full sm:w-auto px-6 py-3 rounded-full bg-orange-600 hover:bg-orange-700 text-white font-semibold text-xs shadow flex items-center justify-center gap-2"
                     >
                         <Shirt class="w-4 h-4" />
-                        <span>Explore Biba Clothings</span>
+                        <span>Explore Ladies Wears</span>
                     </Link>
 
                     <Link
-                        :href="route('confectionery.index')"
-                        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#5C1D24] hover:bg-[#732730] text-white font-semibold text-xs shadow flex items-center justify-center gap-2"
+                        :href="route('spa.index')"
+                        class="w-full sm:w-auto px-6 py-3 rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-950 font-semibold text-xs shadow flex items-center justify-center gap-2"
                     >
                         <Cake class="w-4 h-4" />
-                        <span>Explore Biba Treats</span>
+                        <span>Explore Spa &amp; Cosmetics</span>
                     </Link>
                 </div>
             </div>
@@ -263,7 +263,7 @@ const submitWhatsAppCheckout = () => {
 
                             <!-- Disclaimer Note -->
                             <div class="p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800 text-[11px] text-zinc-500 leading-relaxed">
-                                ℹ️ <em>WhatsApp checkout creates an instant order enquiry. Final item confirmation, delivery options, and payment arrangements will be finalized directly with Biba on WhatsApp.</em>
+                                ℹ️ <em>WhatsApp checkout creates an instant order enquiry. Final item confirmation, delivery options, and payment arrangements will be finalized directly with TeamAkeem on WhatsApp.</em>
                             </div>
                         </div>
 

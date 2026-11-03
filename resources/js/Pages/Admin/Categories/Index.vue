@@ -90,7 +90,7 @@ const categoryIcon = (slug: string) => slug === 'clothing' ? Shirt : Cake;
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">Brand / Display Name *</label>
-                            <input v-model="createForm.brand_name" type="text" placeholder="e.g. Biba Accessories"
+                            <input v-model="createForm.brand_name" type="text" placeholder="e.g. TeamAkeem Cosmetics"
                                 class="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 py-2 text-sm" />
                             <p v-if="createForm.errors.brand_name" class="text-red-500 text-xs mt-1">{{ createForm.errors.brand_name }}</p>
                         </div>

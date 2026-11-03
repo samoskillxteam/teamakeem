@@ -19,15 +19,17 @@ let observer: IntersectionObserver | null = null;
 
 const detailRoute = computed(() => {
     const catSlug = props.product.category?.slug;
-    if (catSlug === 'confectionery') {
-        return route('confectionery.show', props.product.slug);
+    if (catSlug === 'confectionery' || catSlug === 'spa') {
+        return route('spa.show', props.product.slug);
     }
     return route('clothing.show', props.product.slug);
 });
 
 const brandLabel = computed(() =>
     props.product.category?.brand_name ||
-    (props.product.category?.slug === 'confectionery' ? 'Biba Treats' : 'Biba Clothings')
+    (props.product.category?.slug === 'confectionery' || props.product.category?.slug === 'spa' 
+        ? 'TeamAkeem Beauty & Wellness Spa' 
+        : 'TeamAkeem Ladies Wears')
 );
 
 const isConfectionery = computed(() => props.product.category?.slug === 'confectionery');
@@ -131,7 +133,7 @@ const formatPrice = (val: number | string) => {
                     loading="lazy"
                 />
                 <div v-else class="w-full h-full flex items-center justify-center bg-zinc-100 dark:bg-[#121214] p-4">
-                    <img src="/images/logo.png" alt="Biba of Good Things" class="w-48 h-48 object-contain opacity-95 transition-transform duration-500 group-hover:scale-105" />
+                    <img src="/images/logo.png" alt="TeamAkeem Ladies World" class="w-48 h-48 object-contain opacity-95 transition-transform duration-500 group-hover:scale-105" />
                 </div>
 
                 <!-- Video (Autoplays and loops when available) -->

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 class CartService
 {
-    protected const SESSION_KEY = 'biba_cart';
+    protected const SESSION_KEY = 'teamakeem_cart';
 
     public function getRawCart(): array
     {
@@ -157,7 +157,7 @@ class CartService
                 'product_slug' => $product->slug,
                 'category_name' => $product->category->name ?? 'General',
                 'category_slug' => $product->category->slug ?? 'clothing',
-                'brand_name' => $product->category->brand_name ?? 'Biba',
+                'brand_name' => $product->category->brand_name ?? 'TeamAkeem',
                 'image_url' => $product->primary_image_url,
                 'variant_id' => $variant ? $variant->id : null,
                 'variant_title' => $variant ? $variant->title : null,

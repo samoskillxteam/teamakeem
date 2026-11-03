@@ -10,7 +10,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
             </h1>
             <div class="prose dark:prose-invert text-sm text-zinc-600 dark:text-zinc-300 space-y-5 leading-relaxed">
                 <p>
-                    At <strong>Biba of Good Things</strong> (operating Biba Clothings and Biba Treats), your privacy is fundamental to our relationship. This policy details how we handle information when you browse our catalogue and place orders through WhatsApp.
+                    At <strong>TeamAkeem Ladies World</strong> (operating TeamAkeem Ladies Wears and TeamAkeem Beauty & Wellness Spa), your privacy is fundamental to our relationship. This policy details how we handle information when you browse our catalogue, book home service spa sessions, and place orders through WhatsApp.
                 </p>
 
                 <h3 class="text-base font-bold text-zinc-900 dark:text-zinc-100">1. Information We Collect</h3>

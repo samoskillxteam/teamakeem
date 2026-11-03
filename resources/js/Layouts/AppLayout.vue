@@ -19,19 +19,19 @@ const settings = computed(() => page.props.settings);
 const cartCount = computed(() => page.props.cartCount || 0);
 
 const whatsappFloatUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348083271068';
+    const raw = settings.value?.whatsapp_number || '2348076187311';
     const clean = raw.replace(/[^\d]/g, '');
-    return `https://wa.me/${clean}?text=${encodeURIComponent('Hello Biba! I am visiting your store and would like to ask a question.')}`;
+    return `https://wa.me/${clean}?text=${encodeURIComponent('Hello TeamAkeem! I am visiting your store and would like to ask a question.')}`;
 });
 </script>
 
 <template>
     <div class="min-h-screen flex flex-col bg-[#FBFBFD] text-[#1D1D1F] dark:bg-[#000000] dark:text-[#F5F5F7] transition-colors duration-200">
         <Head>
-            <title>{{ props.title ? `${props.title} | Biba of Good Things` : 'Biba of Good Things — Fashion & Confectioneries' }}</title>
+            <title>{{ props.title ? `${props.title} | TeamAkeem Ladies World` : 'TeamAkeem Ladies World — Ladies Wears & Beauty Spa' }}</title>
             <meta v-if="props.description" name="description" :content="props.description" />
-            <meta property="og:title" :content="props.title || 'Biba of Good Things'" />
-            <meta property="og:description" :content="props.description || 'Curated fashion from Biba Clothings and handcrafted treats from Biba Treats.'" />
+            <meta property="og:title" :content="props.title || 'TeamAkeem Ladies World'" />
+            <meta property="og:description" :content="props.description || 'Luxury ladies underwear and apparel alongside restorative treatments at TeamAkeem Beauty and Wellness Spa.'" />
         </Head>
 
         <!-- Navbar -->
@@ -97,13 +97,13 @@ const whatsappFloatUrl = computed(() => {
                 <Home class="w-4 h-4" />
                 <span>Store</span>
             </Link>
-            <Link :href="route('clothing.index')" class="flex flex-col items-center gap-0.5 text-[10px] font-normal py-1 px-2 rounded-lg transition-colors" :class="route().current('clothing.*') ? 'text-black dark:text-white font-medium' : 'text-zinc-400 dark:text-zinc-500'">
+            <Link :href="route('clothing.index')" class="flex flex-col items-center gap-0.5 text-[10px] font-normal py-1 px-2 rounded-lg transition-colors" :class="route().current('clothing.*') ? 'text-orange-500 font-semibold' : 'text-zinc-400 dark:text-zinc-500'">
                 <Shirt class="w-4 h-4" />
-                <span>Clothings</span>
+                <span>Ladies</span>
             </Link>
-            <Link :href="route('confectionery.index')" class="flex flex-col items-center gap-0.5 text-[10px] font-normal py-1 px-2 rounded-lg transition-colors" :class="route().current('confectionery.*') ? 'text-black dark:text-white font-medium' : 'text-zinc-400 dark:text-zinc-500'">
+            <Link :href="route('spa.index')" class="flex flex-col items-center gap-0.5 text-[10px] font-normal py-1 px-2 rounded-lg transition-colors" :class="route().current('spa.*') || route().current('confectionery.*') ? 'text-orange-500 font-semibold' : 'text-zinc-400 dark:text-zinc-500'">
                 <Cake class="w-4 h-4" />
-                <span>Treats</span>
+                <span>Spa</span>
             </Link>
             <Link :href="route('cart.index')" class="relative flex flex-col items-center gap-0.5 text-[10px] font-normal py-1 px-2 rounded-lg transition-colors" :class="route().current('cart.*') ? 'text-black dark:text-white font-medium' : 'text-zinc-400 dark:text-zinc-500'">
                 <ShoppingBag class="w-4 h-4" />

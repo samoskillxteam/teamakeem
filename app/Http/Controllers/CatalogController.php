@@ -73,15 +73,15 @@ class CatalogController extends Controller
         ]);
     }
 
-    public function confectionery(Request $request): Response
+    public function spa(Request $request): Response
     {
-        $category = Category::where('slug', 'confectionery')->firstOrFail();
+        $category = Category::whereIn('slug', ['spa', 'confectionery'])->firstOrFail();
 
         $query = Product::where('category_id', $category->id)
             ->where('is_available', true)
             ->with(['category', 'media', 'variants']);
 
-        // Filter by product type (cupcake, cake, drink, snack, pastry)
+        // Filter by product type (massage, treatment, pedicure, waxing, dental, traditional_spa, cosmetics)
         if ($type = $request->input('type')) {
             $query->where('product_type', $type);
         }
@@ -118,7 +118,12 @@ class CatalogController extends Controller
         ]);
     }
 
-    public function confectioneryShow(string $slug): Response
+    public function confectionery(Request $request): Response
+    {
+        return $this->spa($request);
+    }
+
+    public function spaShow(string $slug): Response
     {
         $product = Product::where('slug', $slug)
             ->where('is_available', true)
@@ -144,5 +149,10 @@ class CatalogController extends Controller
             'product' => $product,
             'relatedProducts' => $relatedProducts,
         ]);
+    }
+
+    public function confectioneryShow(string $slug): Response
+    {
+        return $this->spaShow($slug);
     }
 }

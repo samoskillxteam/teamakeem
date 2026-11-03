@@ -41,7 +41,7 @@ const logout = () => {
         <!-- Mobile Header Bar -->
         <div class="md:hidden flex items-center justify-between p-4 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
             <div class="flex items-center gap-2">
-                <span class="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100">BIBA ADMIN</span>
+                <span class="font-bold text-lg text-zinc-900 dark:text-zinc-100 uppercase font-sans">TEAMAKEEM ADMIN</span>
             </div>
             <div class="flex items-center gap-2">
                 <ThemeToggle />
@@ -65,11 +65,11 @@ const logout = () => {
                 <!-- Branding -->
                 <div class="flex items-center justify-between pb-6 border-b border-zinc-200 dark:border-zinc-800">
                     <div>
-                        <h2 class="font-display font-extrabold text-xl text-zinc-900 dark:text-zinc-100 tracking-wider">
-                            BIBA
+                        <h2 class="font-bold text-xl text-zinc-900 dark:text-zinc-100 tracking-wider uppercase font-sans">
+                            TEAMAKEEM
                         </h2>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-[#A66E38] dark:text-[#C59A65]">
-                            MANAGEMENT PORTAL
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-orange-500">
+                            LADIES WORLD PORTAL
                         </span>
                     </div>
                     <ThemeToggle class="hidden md:inline-flex" />
