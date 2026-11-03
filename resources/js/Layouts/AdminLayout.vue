@@ -9,6 +9,7 @@ import {
     FolderTree, 
     MessageSquare, 
     Settings, 
+    KeyRound,
     ExternalLink, 
     LogOut, 
     Menu, 
@@ -126,6 +127,16 @@ const logout = () => {
                         <Settings class="w-4 h-4" />
                         <span>Store Settings</span>
                     </Link>
+
+                    <Link
+                        :href="route('admin.profile')"
+                        @click="mobileSidebarOpen = false"
+                        class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-colors"
+                        :class="route().current('admin.profile*') ? 'bg-[#2D241E] text-white dark:bg-[#C59A65] dark:text-[#0F1115] shadow-sm' : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800'"
+                    >
+                        <KeyRound class="w-4 h-4" />
+                        <span>Profile & Security</span>
+                    </Link>
                 </nav>
             </div>
 
@@ -144,10 +155,10 @@ const logout = () => {
                 </a>
 
                 <div class="pt-2 flex items-center justify-between">
-                    <div class="truncate max-w-[140px]">
-                        <p class="text-xs font-bold text-zinc-800 dark:text-zinc-200 truncate">{{ user?.name || 'Admin' }}</p>
+                    <Link :href="route('admin.profile')" class="truncate max-w-[140px] group block">
+                        <p class="text-xs font-bold text-zinc-800 dark:text-zinc-200 truncate group-hover:text-orange-500 transition-colors">{{ user?.name || 'Admin' }}</p>
                         <p class="text-[10px] text-zinc-400 truncate">{{ user?.email }}</p>
-                    </div>
+                    </Link>
 
                     <button
                         type="button"

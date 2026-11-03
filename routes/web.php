@@ -86,5 +86,10 @@ Route::prefix('admin')->group(function () {
         // Settings Management
         Route::get('/settings', [AdminSettingController::class, 'index'])->name('admin.settings.index');
         Route::post('/settings', [AdminSettingController::class, 'update'])->name('admin.settings.update');
+
+        // Profile & Password
+        Route::get('/profile', [AdminSettingController::class, 'profile'])->name('admin.profile');
+        Route::post('/profile/password', [AdminSettingController::class, 'updatePassword'])->name('admin.profile.password');
+        Route::post('/profile/details', [AdminSettingController::class, 'updateDetails'])->name('admin.profile.details');
     });
 });
