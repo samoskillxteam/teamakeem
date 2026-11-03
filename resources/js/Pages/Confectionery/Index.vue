@@ -121,7 +121,7 @@ const formatTypeName = (type: string) => {
                             <!-- Image Container -->
                             <div class="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden bg-zinc-950">
                                 <img 
-                                    src="/storage/products/spa/spa_body_massage.jpg" 
+                                    src="/images/products/spa/spa_body_massage.jpg" 
                                     alt="TeamAkeem Beauty &amp; Wellness Spa" 
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />

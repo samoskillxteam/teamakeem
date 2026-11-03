@@ -232,7 +232,7 @@ onMounted(() => {
                             <!-- Image Container -->
                             <div class="aspect-square sm:aspect-[4/3] lg:aspect-square overflow-hidden bg-zinc-950">
                                 <img 
-                                    src="/storage/products/ladies/ladies_1.jpg" 
+                                    src="/images/products/ladies/ladies_1.jpg" 
                                     alt="TeamAkeem Ladies Wears &amp; Underwear" 
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />

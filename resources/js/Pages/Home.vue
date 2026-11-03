@@ -234,7 +234,7 @@ const heroMobileSrc = computed(() => isDark.value ? '/images/Teemakeem_Hero_Mobi
                         >
                             <div class="aspect-[16/9] overflow-hidden bg-zinc-950">
                                 <img
-                                    src="/storage/products/ladies/ladies_1.jpg"
+                                    src="/images/products/ladies/ladies_1.jpg"
                                     alt="TeamAkeem Ladies Wears"
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
@@ -304,7 +304,7 @@ const heroMobileSrc = computed(() => isDark.value ? '/images/Teemakeem_Hero_Mobi
                         <div class="relative group rounded-2xl overflow-hidden bg-white/90 dark:bg-[#1C0B02] border border-orange-500/20 dark:border-orange-500/35">
                             <div class="aspect-[16/9] overflow-hidden bg-zinc-950">
                                 <img
-                                    src="/storage/products/spa/spa_body_massage.jpg"
+                                    src="/images/products/spa/spa_body_massage.jpg"
                                     alt="TeamAkeem Ladies Beauty & Wellness Spa"
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
