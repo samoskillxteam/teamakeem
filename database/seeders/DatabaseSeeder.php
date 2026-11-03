@@ -547,7 +547,7 @@ class DatabaseSeeder extends Seeder
                 'is_available' => true,
                 'is_featured' => true,
                 'display_order' => 2,
-                'image_path' => 'products/spa/spa_intimate_repair.jpg',
+                'image_path' => 'products/spa/spa_oshot_rejuvenation.jpg',
                 'options' => [
                     'Treatment Protocol' => ['Standard Intimate Repair Session', 'Intensive Restorative Rejuvenation & Consultation'],
                     'Location' => ['In-Studio Private Suite', 'Home Service VIP Appointment'],
