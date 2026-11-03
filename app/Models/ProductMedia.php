@@ -37,7 +37,20 @@ class ProductMedia extends Model
             return $this->file_path;
         }
 
-        return asset('storage/' . ltrim($this->file_path, '/'));
+        $clean = ltrim($this->file_path, '/');
+
+        // Check if physical file exists in public/images/ (blazing fast and guaranteed on shared hosts)
+        if (file_exists(public_path('images/' . $clean))) {
+            return asset('images/' . $clean);
+        }
+
+        // Check if physical file exists directly in public/
+        if (file_exists(public_path($clean))) {
+            return asset($clean);
+        }
+
+        // Standard Laravel storage path
+        return asset('storage/' . $clean);
     }
 
     public function product(): BelongsTo

@@ -53,11 +53,25 @@ Route::get('/terms', [PageController::class, 'terms'])->name('terms');
 
 // Storage fallback for shared hosts without active symlink
 Route::get('/storage/{path}', function (string $path) {
-    $filePath = storage_path('app/public/' . $path);
-    if (!file_exists($filePath)) {
-        abort(404);
+    // 1. Direct in public/images/
+    $imagesPath = public_path('images/' . $path);
+    if (file_exists($imagesPath)) {
+        return response()->file($imagesPath);
     }
-    return response()->file($filePath);
+
+    // 2. Direct in public/
+    $publicPath = public_path($path);
+    if (file_exists($publicPath)) {
+        return response()->file($publicPath);
+    }
+
+    // 3. In storage/app/public/
+    $storagePath = storage_path('app/public/' . $path);
+    if (file_exists($storagePath)) {
+        return response()->file($storagePath);
+    }
+
+    abort(404);
 })->where('path', '.*')->name('storage.fallback');
 
 // Admin Authentication
